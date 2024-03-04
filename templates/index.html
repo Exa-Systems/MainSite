@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXA</title>
+    <link rel="stylesheet" href="static/css/topnav.css">
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+    <div class="topnav">
+        <div class="top">
+            <img onclick="location.href='/'" class="logo" src="static/img/EXA_logo.png" />
+            <div class="menus">
+                <a href="/product" class="menu">Product</a>
+                <a href="/about" class="menu">About Us</a>
+                <a href="/careers" class="menu">Careers</a>
+                <a href="/notice" class="menu">Notice</a>
+            </div>
+            <input type="button" value="Contact" onclick="location.href='/talmo'">
+        </div>
+    </div>
+    <div class="landing">
+        <h1>Making Future for Everyone</h1>
+    </div>
+    <div class="section">
+        <div class="project">
+            <span>Project 1</span>
+            <h1>File Sharing Platform</h1>
+            <div class="description">
+                <img src="static/img/Project1/1.png">
+                <div class="repim">
+                    <img src="static/img/AppXchange_logo.jpg">
+                    <h1>App Store for New Developers</h1>
+                    <span>AppXchange is a 3rd-party App Store where all developers can upload their programs for free.<br>It also provides a file sharing function, allowing you to send and receive files easily and quickly.</span>
+                    <center><br><input type="button" value="Quotation Contact" onclick="location.href='/contact/1'"></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="project">
+            <span>Project 2</span>
+            <h1>Free Video Conference System<br>For Companies</h1>
+            <div class="description">
+                <img src="static/img/Project1/1.png">
+                <div class="repim">
+                    <img src="static/img/AppXchange_logo.jpg">
+                    <h1>App Store for New Developers</h1>
+                    <span>AppXchange is a 3rd-party App Store where all developers can upload their programs for free.<br>It also provides a file sharing function, allowing you to send and receive files easily and quickly.</span>
+                    <center><br><input type="button" value="Quotation Contact" onclick="location.href='/contact/1'"></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let scrolling = false;
+
+        document.body.addEventListener('wheel', event => {
+        if (scrolling) return;
+        scrolling = true;
+        setTimeout(() => scrolling = false, 400);
+        event.preventDefault();
+        const viewportHeight = window.innerHeight;
+        if (event.deltaY > 0) {
+            window.scrollTo({
+            top: window.pageYOffset + viewportHeight,
+            behavior: 'smooth'
+            });
+        } else {
+            window.scrollTo({
+            top: window.pageYOffset - viewportHeight,
+            behavior: 'smooth'
+            });
+        }
+        }, { passive: false });
+
+    </script>
+</body>
+</html>
